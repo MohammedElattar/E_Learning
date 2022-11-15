@@ -16,6 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get("/install", function () {
     echo `cd .. && composer install && composer update && php artisan cron:refresh-database`;
 });
-Route::get("/test", function () {
-    echo "This is Test";
-});

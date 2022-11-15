@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('');
+Route::get("/test", function () {
+    echo "This is Test";
+});
