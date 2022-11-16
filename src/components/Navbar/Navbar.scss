@@ -1,0 +1,152 @@
+@use "../../styles/variables.scss" as *;
+
+.navbar-navbar {
+  border-bottom: 1px solid $border;
+  z-index: 22;
+  .container {
+    height: 80px;
+    display: flex;
+    .mobile-container {
+      flex-grow: 1;
+      height: 100%;
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 45px;
+    }
+  }
+  .mobile-container {
+    nav {
+      gap: 30px;
+      height: 100%;
+      margin: 0 auto;
+      a {
+        text-transform: capitalize;
+        font-size: 20px;
+        text-decoration: none;
+        color: $gray;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        height: 100%;
+        &.active {
+          color: #000;
+        }
+        &:not(.active):hover {
+          color: $blue;
+        }
+      }
+    }
+    .auth-btns {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #000;
+        transition: 0.3s;
+        font-weight: 500;
+        &:hover {
+          color: $blue;
+          transform: translateY(-7px);
+          background-color: transparent;
+          border-color: $blue;
+        }
+      }
+      .signup {
+        background-color: $blue;
+        color: #fff;
+        padding: 10px 30px;
+        border: 1px solid $blue;
+        border-radius: 1000px;
+        font-size: 18px;
+      }
+    }
+
+    @include laptop {
+      nav {
+        a {
+          font-size: 16px;
+        }
+      }
+      .auth-btns {
+        a {
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    @include tablet {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 100vw;
+      width: 300px;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: flex-start !important;
+      align-items: stretch !important;
+      padding: 20px 0;
+      transition: left 0.5s;
+      z-index: 25;
+      &.active {
+        left: calc(100vw - 300px);
+      }
+      header {
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $border;
+        padding: 20px;
+        .mobile-logo {
+          img {
+            height: 45px;
+          }
+        }
+        .mobile-toggle {
+          font-size: 35px;
+          border: none;
+          outline: none;
+          color: $blue;
+          background-color: transparent;
+        }
+      }
+      nav {
+        flex-direction: column;
+        margin: 0;
+        gap: 0;
+        flex: 0;
+        a {
+          border-bottom: 1px solid $border;
+          width: 100%;
+          height: auto;
+          padding: 15px 20px;
+        }
+      }
+      .auth-btns {
+        flex-direction: column-reverse;
+        padding: 20px;
+        a {
+          width: 100%;
+          text-align: center;
+          padding: 10px 30px;
+          border: 1px solid #000;
+          border-radius: 1000px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .toggle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: $blue;
+  }
+}
