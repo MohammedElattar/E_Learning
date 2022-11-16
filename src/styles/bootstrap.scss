@@ -1,0 +1,6 @@
+@use "./variables.scss" as *;
+@import "bootstrap/dist/css/bootstrap.min.css";
+$primary: $blue;
+$secondary: $yellow;
+$dark: $black;
+$border-color: $border;

@@ -1,0 +1,108 @@
+@use "../../styles/variables.scss" as *;
+
+.home-landing {
+  .container {
+    height: calc(100vh - 80px);
+    align-items: center;
+    .text {
+      width: 50%;
+      h1 {
+        font-size: 50px;
+        color: $black;
+        font-weight: 500;
+      }
+      p {
+        font-size: 20px;
+        color: $black;
+        margin: 20px 0;
+      }
+      .btns {
+        a {
+          white-space: nowrap;
+          padding: 10px 35px;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 18px;
+          transition: 0.3s;
+          border-radius: 100px;
+        }
+        .yellow {
+          background-color: $yellow;
+          color: $black;
+          &:hover {
+            transform: translateY(-7px);
+          }
+        }
+        .blue {
+          background-color: transparent;
+          color: $blue;
+          border: 1px solid $blue;
+          &:hover {
+            transform: translateY(-7px);
+            color: #fff;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+    @include laptop {
+      .text {
+        h1 {
+          font-size: 45px;
+        }
+      }
+    }
+    @include tablet {
+      height: auto;
+      .text {
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        .btns {
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.why-us {
+  position: relative;
+  padding-bottom: 400px;
+  .box {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    .icon {
+      border-radius: 10px;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+    }
+    h3 {
+      margin: 20px 0;
+    }
+  }
+  .absolute-text {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    .bg {
+      position: absolute;
+      width: 150%;
+      left: -25%;
+      z-index: -1;
+    }
+  }
+}
