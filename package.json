@@ -1,5 +1,5 @@
 {
-  "name": "E-Learning Website",
+  "name": "e_learning",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,7 +17,7 @@
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
-    "sweetalert2": "^11.6.8"
+    "sweetalert2": "^11.4.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
